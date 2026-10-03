@@ -1,0 +1,59 @@
+[
+  {
+    "source_id": "LIB-P0",
+    "name_fa": "کتابخانه دانش مشاور انتخاب رشته P0",
+    "url": null,
+    "authority_level": "C",
+    "active": true,
+    "notes": "منبع داخلی پروژه؛ provisional و جایگزین منبع اصلی نیست."
+  },
+  {
+    "source_id": "S001",
+    "name_fa": "سازمان سنجش آموزش کشور",
+    "url": "https://www.sanjesh.org/",
+    "authority_level": "A",
+    "active": true
+  },
+  {
+    "source_id": "S002",
+    "name_fa": "وزارت علوم، تحقیقات و فناوری",
+    "url": "https://www.msrt.ir/",
+    "authority_level": "A",
+    "active": true
+  },
+  {
+    "source_id": "QS",
+    "name_fa": "QS World University Rankings",
+    "url": "https://www.topuniversities.com/",
+    "authority_level": "B",
+    "active": true
+  },
+  {
+    "source_id": "THE",
+    "name_fa": "Times Higher Education",
+    "url": "https://www.timeshighereducation.com/",
+    "authority_level": "B",
+    "active": true
+  },
+  {
+    "source_id": "ISC",
+    "name_fa": "ISC",
+    "url": "https://isc.ac/",
+    "authority_level": "B",
+    "active": true
+  },
+  {
+    "source_id": "WEF",
+    "name_fa": "World Economic Forum",
+    "url": "https://www.weforum.org/",
+    "authority_level": "B",
+    "active": true
+  },
+  {
+    "source_id": "BLS",
+    "name_fa": "U.S. Bureau of Labor Statistics",
+    "url": "https://www.bls.gov/ooh/",
+    "authority_level": "B",
+    "active": true
+  }
+]
