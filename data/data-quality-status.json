@@ -24,7 +24,27 @@
       "rows_staged": 45,
       "status": "partial_secondary_samples",
       "canonical_imported": false,
-      "reason": "sample-card style secondary observations; course type and official coding require verification"
+      "reason": "sample-card style secondary observations; course type and official coding require verification",
+      "rows_present": 45
+    },
+    "historical_range_staging": {
+      "years": [
+        1400,
+        1401
+      ],
+      "rows": 6,
+      "status": "partial_secondary_ranges",
+      "canonical_imported": false
+    },
+    "offering_catalog": {
+      "years_target": [
+        1400,
+        1401,
+        1402,
+        1403
+      ],
+      "years_canonical": [],
+      "status": "not_loaded"
     }
   },
   "universities": {
@@ -52,5 +72,14 @@
     "notice_classes": 12,
     "current_1406_policy_reviewed": true,
     "last_checked": "2026-10-03"
+  },
+  "calibration": {
+    "outcome_rows": 0,
+    "status": "blocked_until_real_outcomes",
+    "metrics_implemented": [
+      "brier_score",
+      "log_loss",
+      "ece_10"
+    ]
   }
 }
