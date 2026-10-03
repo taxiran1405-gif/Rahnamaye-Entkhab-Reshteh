@@ -1,20 +1,81 @@
 {
-  "version":"0.1",
-  "group":"math",
-  "years":[1400,1401,1402,1403],
-  "official_document_targets":[
-    {"year":1400,"kind":"selection_booklet_math","source_id":"S001","status":"discovery"},
-    {"year":1401,"kind":"selection_booklet_math","source_id":"S001","status":"discovery"},
-    {"year":1402,"kind":"selection_booklet_math","source_id":"S001","status":"discovery","mirror_evidence":"https://t.me/s/sazemansanjesh?before=3688"},
-    {"year":1403,"kind":"selection_booklet_math","source_id":"S001","status":"discovery","mirror_evidence":"https://t.me/s/sazemansanjesh?before=4239"}
+  "version": "0.1",
+  "group": "math",
+  "years": [
+    1400,
+    1401,
+    1402,
+    1403
   ],
-  "secondary_admission_targets":[
-    {"program_id":"PF-CSE","source":"NovinGam"},
-    {"program_id":"PF-EE","source":"NovinGam"},
-    {"program_id":"PF-ME","source":"NovinGam"},
-    {"program_id":"PF-CE","source":"NovinGam"},
-    {"program_id":"PF-IND","source":"NovinGam"},
-    {"program_id":"PF-CS","source":"NovinGam"}
+  "official_document_targets": [
+    {
+      "year": 1400,
+      "kind": "selection_booklet_math",
+      "source_id": "S001",
+      "status": "discovery"
+    },
+    {
+      "year": 1401,
+      "kind": "selection_booklet_math",
+      "source_id": "S001",
+      "status": "discovery",
+      "official_url": "https://www8.sanjesh.org/download/1401/sar/cs/NOTE_CSRiazi1401_v2.pdf",
+      "verification_note": "official URL reproduced in archival reports; direct fetch blocked in current web session"
+    },
+    {
+      "year": 1402,
+      "kind": "selection_booklet_math",
+      "source_id": "S001",
+      "status": "discovery",
+      "mirror_evidence": "https://t.me/s/sazemansanjesh?before=3688"
+    },
+    {
+      "year": 1403,
+      "kind": "selection_booklet_math",
+      "source_id": "S001",
+      "status": "discovery",
+      "mirror_evidence": "https://t.me/s/sazemansanjesh?before=4239"
+    }
   ],
-  "important_rule":"Web page images/sample cards are staging evidence; they are not canonical last-rank values without extraction and verification."
+  "secondary_admission_targets": [
+    {
+      "program_id": "PF-CSE",
+      "source": "NovinGam"
+    },
+    {
+      "program_id": "PF-EE",
+      "source": "NovinGam"
+    },
+    {
+      "program_id": "PF-ME",
+      "source": "NovinGam"
+    },
+    {
+      "program_id": "PF-CE",
+      "source": "NovinGam"
+    },
+    {
+      "program_id": "PF-IND",
+      "source": "NovinGam"
+    },
+    {
+      "program_id": "PF-CS",
+      "source": "NovinGam"
+    }
+  ],
+  "important_rule": "Web page images/sample cards are staging evidence; they are not canonical last-rank values without extraction and verification.",
+  "discovery_evidence": [
+    {
+      "year": 1403,
+      "group": "math",
+      "evidence_url": "https://t.me/s/sazemansanjesh?before=4239",
+      "note": "archive post names Riazi.pdf as 1403 mathematics selection booklet"
+    },
+    {
+      "year": 1402,
+      "group": "math",
+      "evidence_url": "https://t.me/s/sazemansanjesh?before=3688",
+      "note": "archive post names mathematics selection booklet and appendix"
+    }
+  ]
 }
