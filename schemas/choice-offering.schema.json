@@ -1,0 +1,30 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"ChoiceOffering",
+  "type":"object",
+  "required":["offering_id","admission_year","group","choice_code","program_id","university_id","course_type","selection_method","source_id","status"],
+  "properties":{
+    "offering_id":{"type":"string"},
+    "admission_year":{"type":"integer"},
+    "group":{"type":"string"},
+    "choice_code":{"type":"string","minLength":1},
+    "program_id":{"type":"string"},
+    "university_id":{"type":"string"},
+    "campus_id":{"type":["string","null"]},
+    "course_type":{"type":"string"},
+    "selection_method":{"type":"string"},
+    "city_id":{"type":["string","null"]},
+    "province_id":{"type":["string","null"]},
+    "quota_eligible":{"type":["boolean","null"]},
+    "capacity":{"type":["integer","null"],"minimum":0},
+    "gender_restriction":{"type":["string","null"]},
+    "native_selection_type":{"type":["string","null"]},
+    "tuition_text":{"type":["string","null"]},
+    "source_id":{"type":"string"},
+    "source_locator":{"type":["string","null"]},
+    "source_snapshot_hash":{"type":["string","null"]},
+    "status":{"enum":["verified","provisional","conflicting","needs-review","superseded"]},
+    "notes":{"type":["string","null"]}
+  },
+  "additionalProperties":false
+}
