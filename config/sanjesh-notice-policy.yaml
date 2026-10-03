@@ -1,0 +1,71 @@
+version: "0.1"
+scope:
+  target_admission_year: 1406
+  historical_comparison_years: [1400,1401,1402,1403,1404]
+
+priority_order:
+  P0:
+    - official_policy_and_regulation
+    - official_registration_rules
+    - official_quota_and_eligibility
+    - official_scorecard_for_selection
+    - official_selection_booklet_and_corrections
+    - official_final_results
+  P1:
+    - Sanjesh_weekly_guidance
+    - official_virtual_selection_guidance
+  P2:
+    - trusted_secondary_summary
+    - advisory_sources
+
+notice_to_rule:
+  required_fields:
+    - rule_id
+    - admission_year
+    - rule_domain
+    - required_inputs
+    - engine_effect
+    - effective_from
+    - effective_to
+    - confidence
+    - source_status
+  rules:
+    - news_without_executable_effect_remains_informational
+    - later_correction_supersedes_earlier_rule_for_same_scope
+    - conflicting_notices_are_retained
+    - rules_are_never_carried_across_years_without_evidence
+
+selection_impact_domains:
+  - eligibility
+  - quota
+  - region
+  - native_selection
+  - course_type
+  - scoring
+  - selection_form
+  - correction
+  - results
+  - academic_record
+  - special_condition
+
+outcome_calibration:
+  unit_of_evaluation: candidate_option
+  required_outcome_fields:
+    - accepted
+    - actual_quota_type
+    - actual_quota_rank
+    - selected_choice_order
+  split:
+    rule: train_validation_test_by_time_or_admission_year
+  leakage:
+    - do_not_use_post_result_information_in_pre_result_predictions
+    - lock_prediction_snapshot_before_result
+  release_metrics:
+    - calibration_curve
+    - brier_score
+    - log_loss
+    - coverage_by_quota
+    - false_safe_rate
+    - false_risky_rate
+    - region_specific_error
+    - quota_specific_error
