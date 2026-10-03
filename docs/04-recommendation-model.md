@@ -93,3 +93,25 @@ Cell-017
 - prediction snapshot قبل از اعلام نتیجه نهایی قفل شود.
 - بعد از نتیجه واقعی، outcome جداگانه ثبت شود.
 - calibration و خطا محاسبه شود.
+
+
+## 9) سهمیه‌محوری در احتمال قبولی — اجباری
+
+رتبه کشوری و رتبه در سهمیه دو feature مستقل هستند. برای مدل پذیرش، ابتدا `final_quota_type` و `final_quota_rank` داوطلب از کارنامه/داده معتبر resolve می‌شوند؛ سپس فقط observationهایی که `quota_type` و `region` لازم و `rank_basis` سازگار دارند وارد مقایسه مستقیم می‌شوند.
+
+برای سهمیه مناطق، منطقه بخشی از کلید تاریخی است. بنابراین:
+`cutoff(region=1)` با `rank(region=2)` مستقیماً مقایسه نمی‌شود.
+
+برای سهمیه‌های خاص، observation هم‌سهمیه لازم است. رتبه کشوری یا رتبه یک سهمیه دیگر هرگز fallback عددی برای cutoff سهمیه‌ای نیست.
+
+قاعده اجرایی:
+
+`direct_probability = f(candidate_final_quota_rank, exact_quota_observations)`
+
+و نه:
+
+`direct_probability = f(national_rank, mixed_quota_observations)`
+
+اگر رتبه سهمیه‌ای معتبر وجود نداشته باشد، خروجی باید `NO_FINAL_QUOTA_RANK` / `insufficient_for_quota_cutoff_comparison` دریافت کند و probability مستقیم تولید نکند.
+
+جزئیات ظرفیت و حدنصاب سهمیه‌های خاص باید از rule-set رسمی هر سال خوانده شوند و با نسخه جداگانه در `config/quota-policy.yaml` ثبت شوند؛ اعداد مقرراتی در کد ثابت نمی‌شوند.
