@@ -1,6 +1,6 @@
 """Coverage report for annual mathematics choice-offering and admission history."""
-import argparse,json
-from collections import Counter
+import argparse
+import json
 from pathlib import Path
 
 def load(path):
@@ -13,7 +13,7 @@ def report(offering_rows, admission_rows):
         o=[r for r in offering_rows if r.get("admission_year")==year and r.get("group")=="math"]
         a=[r for r in admission_rows if r.get("data_year")==year and r.get("group")=="math"]
         result[str(year)]={
-            "offering_raw_or_canonical_rows":len(o),
+            "offering_rows":len(o),
             "unique_choice_codes":len({r.get("choice_code") for r in o}),
             "admission_rows":len(a),
             "admission_programs":len({r.get("program_id") for r in a}),
@@ -26,4 +26,8 @@ def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--offerings",required=True)
     ap.add_argument("--admissions",required=True)
+    args=ap.parse_args()
     print(json.dumps(report(load(args.offerings),load(args.admissions)),ensure_ascii=False,indent=2))
+
+if __name__=="__main__":
+    main()
