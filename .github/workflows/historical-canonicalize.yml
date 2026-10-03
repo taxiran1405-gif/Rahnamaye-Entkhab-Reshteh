@@ -1,0 +1,41 @@
+name: Canonicalize historical mathematics corpus
+
+on:
+  workflow_run:
+    workflows: ["Historical mathematics corpus"]
+    types: [completed]
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  canonicalize:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        year: [1400, 1401, 1402, 1403]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Download yearly artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: historical-math-booklet-${{ matrix.year }}
+          path: artifacts/raw/${{ matrix.year }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
+      - name: Build raw catalog
+        run: python scripts/build_raw_choice_catalog.py --input artifacts/raw/${{ matrix.year }}/${{ matrix.year }}-candidate-rows.jsonl --output artifacts/canonical/${{ matrix.year }}/raw-choice-offerings.jsonl
+      - name: Conservative mapping
+        run: python scripts/map_raw_choice_catalog.py --raw artifacts/canonical/${{ matrix.year }}/raw-choice-offerings.jsonl --programs data/program-families.seed.json --universities data/universities-capitals.seed.json --mapped-output artifacts/canonical/${{ matrix.year }}/mapped.jsonl --review-output artifacts/canonical/${{ matrix.year }}/needs-review.jsonl
+      - name: Upload canonicalization artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: historical-math-canonicalization-${{ matrix.year }}
+          path: artifacts/canonical/${{ matrix.year }}
+          retention-days: 30
