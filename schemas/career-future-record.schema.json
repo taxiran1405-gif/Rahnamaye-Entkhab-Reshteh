@@ -1,0 +1,14 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"CareerFutureRecord",
+  "type":"object",
+  "required":["id","program_id","occupation","country","data_year","statistic_type","outlook_start","outlook_end","source_id","source_url","confidence"],
+  "properties":{
+    "id":{"type":"string"},"program_id":{"type":"string"},"occupation":{"type":"string"},"country":{"type":"string"},
+    "data_year":{"type":"integer"},"statistic_type":{"type":"string"},"currency":{"type":["string","null"]},
+    "value":{"type":["number","null"]},"outlook_start":{"type":"integer"},"outlook_end":{"type":"integer"},
+    "outlook_percent":{"type":["number","null"]},"signal":{"type":"string"},
+    "source_id":{"type":"string"},"source_url":{"type":"string","format":"uri"},
+    "confidence":{"enum":["C4","C3","C2","C1","CX"]},"mapping_status":{"type":"string"}
+  }
+}
