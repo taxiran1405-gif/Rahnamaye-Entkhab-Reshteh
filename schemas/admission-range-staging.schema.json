@@ -1,0 +1,26 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"AdmissionRangeStaging",
+  "type":"object",
+  "required":["id","data_year","program_id","university_id","course_type","quota_type","region","lower_rank","upper_rank","data_kind","confidence","source_id","status"],
+  "properties":{
+    "id":{"type":"string"},
+    "data_year":{"type":"integer"},
+    "program_id":{"type":"string"},
+    "university_id":{"type":"string"},
+    "course_type":{"type":"string"},
+    "quota_type":{"type":"string"},
+    "region":{"type":["string","null"]},
+    "rank_basis":{"enum":["quota_rank","regional_rank","special_quota_rank","national_rank"]},
+    "lower_rank":{"type":"integer","minimum":1},
+    "upper_rank":{"type":"integer","minimum":1},
+    "national_rank_upper":{"type":["integer","null"],"minimum":1},
+    "data_kind":{"enum":["approx_range","sample_card"]},
+    "confidence":{"enum":["C4","C3","C2","C1","CX"]},
+    "source_id":{"type":"string"},
+    "source_locator":{"type":"string"},
+    "status":{"enum":["provisional","needs-review","conflicting","verified"]},
+    "notes":{"type":["string","null"]}
+  },
+  "additionalProperties":false
+}
