@@ -1,0 +1,45 @@
+version: 0.1
+source_policy:
+  primary:
+    - id: S001
+      name: سازمان سنجش آموزش کشور
+      url: https://www.sanjesh.org/
+      authority: A
+      domains: [rules, notices, admissions, booklets]
+    - id: S002
+      name: وزارت علوم، تحقیقات و فناوری
+      url: https://www.msrt.ir/
+      authority: A
+      domains: [higher_education, programs, policy]
+  university_rankings:
+    - id: QS
+      url: https://www.topuniversities.com/
+      authority: B
+      rule: keep_independent
+    - id: THE
+      url: https://www.timeshighereducation.com/
+      authority: B
+      rule: keep_independent
+    - id: ISC
+      url: https://isc.ac/
+      authority: B
+      rule: keep_independent
+  labor_market:
+    - id: WEF
+      url: https://www.weforum.org/
+      authority: B
+      domains: [future_of_jobs, skills, global_signals]
+    - id: BLS
+      url: https://www.bls.gov/ooh/
+      authority: B
+      domains: [occupations, pay, outlook]
+
+rules:
+  - never_treat_secondary_cutoff_as_official
+  - preserve_conflicting_values
+  - require_data_year
+  - require_retrieved_at
+  - require_entity_mapping
+  - require_course_type_for_admission_records
+  - require_country_and_currency_for_income
+  - no_unsourced_numeric_claims

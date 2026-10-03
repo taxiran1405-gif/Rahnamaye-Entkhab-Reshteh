@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EvidenceRecord",
+  "type": "object",
+  "required": [
+    "evidence_id",
+    "source_id",
+    "source_url",
+    "retrieved_at",
+    "data_year",
+    "entity_id",
+    "field",
+    "value",
+    "authority_level",
+    "confidence"
+  ],
+  "properties": {
+    "evidence_id": {"type": "string"},
+    "source_id": {"type": "string"},
+    "source_url": {"type": "string", "format": "uri"},
+    "retrieved_at": {"type": "string", "format": "date-time"},
+    "data_year": {"type": "integer"},
+    "academic_year": {"type": ["integer", "null"]},
+    "entity_id": {"type": "string"},
+    "field": {"type": "string"},
+    "value": {},
+    "value_type": {"type": "string"},
+    "authority_level": {"enum": ["A", "B", "C", "D"]},
+    "confidence": {"enum": ["C4", "C3", "C2", "C1", "CX"]},
+    "freshness_score": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "corroboration_count": {"type": ["integer", "null"], "minimum": 0},
+    "conflict_status": {"enum": ["none", "conflicting", "needs_review", "resolved"]},
+    "extraction_method": {"type": ["string", "null"]},
+    "evidence_locator": {"type": ["string", "null"]},
+    "content_hash": {"type": ["string", "null"]}
+  }
+}

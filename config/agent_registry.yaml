@@ -1,0 +1,64 @@
+version: 0.1
+project: Rahnamaye-Entkhab-Reshteh
+target_admission_year: 1406
+
+agents:
+  - id: A00
+    name: internal_manager
+    type: orchestrator
+    criticality: critical
+  - id: A01
+    name: source_sentinel
+    type: monitor
+    criticality: critical
+    cadence: continuous
+  - id: A02
+    name: admission_statistics
+    type: analytics
+    criticality: critical
+  - id: A03
+    name: university_academic_quality
+    type: analytics
+    criticality: high
+  - id: A04
+    name: student_life_housing
+    type: analytics
+    criticality: high
+  - id: A05
+    name: student_satisfaction
+    type: analytics
+    criticality: medium
+  - id: A06
+    name: career_future
+    type: analytics
+    criticality: high
+  - id: A07
+    name: preference_interest
+    type: profiling
+    criticality: high
+  - id: A08
+    name: geography_eligibility
+    type: rules
+    criticality: critical
+  - id: A09
+    name: recommendation_engine
+    type: deterministic_service
+    criticality: critical
+  - id: A10
+    name: verification_redteam
+    type: verifier
+    criticality: critical
+  - id: A11
+    name: presentation_explanation
+    type: presentation
+    criticality: medium
+
+decision_principles:
+  - eligibility_before_scoring
+  - source_before_claim
+  - evidence_before_rank
+  - uncertainty_never_hidden
+  - course_type_never_merged
+  - data_year_separate_from_academic_year
+  - overall_rank_separate_from_subject_rank
+  - recommendation_must_be_explainable
