@@ -1,5 +1,6 @@
 import unittest
 from rer.admission.quota import RankContext, select_candidate_rank, filter_comparable_observations
+from rer.admission.engine import estimate_probability_for_quota_context
 
 class TestQuotaLogic(unittest.TestCase):
     def setUp(self):
@@ -31,6 +32,26 @@ class TestQuotaLogic(unittest.TestCase):
         d=select_candidate_rank(self.ctx,"5_percent_esaargar",None)
         self.assertFalse(d.comparable)
         self.assertEqual(d.reason_code,"QUOTA_TYPE_MISMATCH")
+
+    def test_probability_boundary_rejects_cross_region_data(self):
+        observations=[
+            {"data_year":1404,"quota_type":"منطقه","region":"1","rank_basis":"quota_rank","cutoff_rank":500},
+            {"data_year":1404,"quota_type":"منطقه","region":"2","rank_basis":"quota_rank","cutoff_rank":2500},
+        ]
+        band=estimate_probability_for_quota_context(
+            self.ctx,"منطقه","2",observations
+        )
+        self.assertEqual(band.n,1)
+        self.assertEqual(band.cutoff_median,2500)
+
+    def test_probability_boundary_rejects_national_rank_fallback(self):
+        ctx=RankContext(12000,"منطقه",None,"2")
+        band=estimate_probability_for_quota_context(
+            ctx,"منطقه","2",
+            [{"data_year":1404,"quota_type":"منطقه","region":"2","rank_basis":"quota_rank","cutoff_rank":2500}]
+        )
+        self.assertEqual(band.n,0)
+        self.assertEqual(band.calibration_status,"insufficient_quota_rank")
 
     def test_filter_keeps_exact_quota_region_only(self):
         rows=[
