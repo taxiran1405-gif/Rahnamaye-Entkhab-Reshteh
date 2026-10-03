@@ -1,0 +1,17 @@
+{
+  "version":"0.1",
+  "status":"staging_partial",
+  "years":[1400,1401,1402,1403],
+  "scope":[
+    {"program_id":"PF-CSE","university_id":"U-FAR-001","regions":["1","2","3"],"course_type":"needs-review","source":"KONKOURCOMPUTER"}
+  ],
+  "rows_staged":45,
+  "canonical_imported":false,
+  "reason":"Secondary source provides accepted-candidate samples but explicitly states it lacks all acceptance cards; it cannot be treated as an official last-rank dataset.",
+  "next_actions":[
+    "verify course_type and code with official field-of-choice booklet",
+    "deduplicate against other secondary sources",
+    "retain as sample_card, never convert to reported_last_rank without evidence",
+    "expand across program x university x course_type x quota x region"
+  ]
+}
