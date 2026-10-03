@@ -1,0 +1,16 @@
+version: 0.1
+classes:
+  - id: RISK-LOW
+    description: "Historical evidence is strong and candidate is materially within observed competitive range."
+  - id: RISK-MEDIUM
+    description: "Candidate is competitive but uncertainty, coverage or preference trade-offs are material."
+  - id: RISK-HIGH
+    description: "Candidate depends on thin/variable evidence, difficult historical range or unresolved conflict."
+  - id: RISK-REVIEW
+    description: "Critical eligibility/data conflict prevents safe automated publication."
+rules:
+  - never_call_low_risk_a_guarantee
+  - C1_or_CX_evidence_can_force_review
+  - critical_rule_conflict_forces_review
+  - stale_primary_source_forces_recheck
+  - published_output_must_include_risk_and_confidence
