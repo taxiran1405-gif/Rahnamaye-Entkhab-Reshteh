@@ -1,0 +1,24 @@
+version: "0.1"
+purpose: "lossless import contract for the internal adviser knowledge workbook"
+principles:
+  - "preserve every source row before normalization"
+  - "never infer official status from a secondary source"
+  - "never overwrite conflicting observations; retain both lineages"
+  - "keep data_year separate from academic_year"
+  - "keep course_type, quota_type and region as separate dimensions"
+  - "do not convert approximate cutoffs into exact last-rank values"
+accepted_input:
+  formats: ["jsonl","csv","tsv"]
+  note: "xlsx extraction happens outside CI; the exported rows must follow schemas/library-raw-row.schema.json"
+required_lineage:
+  fields: ["raw_sheet","raw_row","source_id","source_locator","import_batch_id","imported_at"]
+canonical_key:
+  fields: ["data_year","group","program_id","university_id","campus_id","course_type","quota_type","region"]
+failure_policy:
+  duplicate_canonical_key: "block unless records are explicitly marked conflicting"
+  missing_lineage: "block"
+  ambiguous_course_type: "needs-review"
+  approximate_as_exact: "block"
+  unsupported_numeric_claim: "block"
+publication:
+  imported_library_data: "provisional_only_until_source_and_conflict_audit"
