@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RecommendationRun",
+  "type": "object",
+  "required": [
+    "run_id",
+    "target_year",
+    "model_version",
+    "rule_version",
+    "weights_version",
+    "source_versions",
+    "verification_status"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "target_year": {
+      "type": "integer"
+    },
+    "profile_snapshot_id": {
+      "type": "string"
+    },
+    "model_version": {
+      "type": "string"
+    },
+    "rule_version": {
+      "type": "string"
+    },
+    "weights_version": {
+      "type": "string"
+    },
+    "source_versions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "candidate_set_hash": {
+      "type": "string"
+    },
+    "recommendation_hash": {
+      "type": "string"
+    },
+    "verification_status": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "REVIEW"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
