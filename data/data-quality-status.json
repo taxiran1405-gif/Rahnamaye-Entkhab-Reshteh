@@ -13,7 +13,19 @@
     ],
     "rows_present": 63,
     "status": "incomplete",
-    "publish_label": "provisional_only"
+    "publish_label": "provisional_only",
+    "historical_staging": {
+      "years": [
+        1400,
+        1401,
+        1402,
+        1403
+      ],
+      "rows_staged": 45,
+      "status": "partial_secondary_samples",
+      "canonical_imported": false,
+      "reason": "sample-card style secondary observations; course type and official coding require verification"
+    }
   },
   "universities": {
     "scope": "31 provincial capitals plus selected regional centers",
@@ -27,5 +39,18 @@
     "url": "https://drive.google.com/drive/folders/1k_cAmBVq_lxXL6Xx19Av-J9WVeahPVuM",
     "connection_status": "not_available_in_current_environment"
   },
-  "last_audit": "2026-10-03"
+  "last_audit": "2026-10-03",
+  "sanjesh_notice_knowledge": {
+    "status": "reviewed_seed",
+    "years_covered": [
+      1400,
+      1402,
+      1403,
+      1404,
+      1406
+    ],
+    "notice_classes": 12,
+    "current_1406_policy_reviewed": true,
+    "last_checked": "2026-10-03"
+  }
 }
