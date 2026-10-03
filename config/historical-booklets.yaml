@@ -1,0 +1,55 @@
+version: "0.1"
+group: math
+booklets:
+  1400:
+    primary:
+      url: "https://www7.sanjesh.org/download/1400/CsSarRiazi1400_note_v1.pdf"
+      source_id: "S001"
+      authority: "A"
+    fallback:
+      - url: "https://www6.sanjesh.org/Download/1400/Sarasari/Cs/CsSarRiazi1400_note_v1.pdf"
+        source_id: "S001"
+        authority: "A"
+      - url: "https://t.me/s/sanjesh3/20670"
+        source_id: "SANJESH-ARCHIVE"
+        authority: "C"
+  1401:
+    primary:
+      url: "https://www8.sanjesh.org/download/1401/sar/cs/NOTE_CSRiazi1401_v2.pdf"
+      source_id: "S001"
+      authority: "A"
+    fallback:
+      - url: "https://irantahsil.org/wp-content/uploads/2022/10/%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF-%D8%AF%D9%81%D8%AA%D8%B1%DA%86%D9%87-%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8-%D8%B1%D8%B4%D8%AA%D9%87-%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C-%DB%B4%DB%B0%DB%B1.pdf"
+        source_id: "IRANTAHsil"
+        authority: "C"
+  1402:
+    primary:
+      url: "https://www.sanjesh.org/"
+      source_id: "S001"
+      authority: "A"
+      note: "Official landing page; attachment URL is not stable in this environment."
+    fallback:
+      - url: "https://avije.org/wp-content/uploads/2023/08/%D8%AF%D9%81%D8%AA%D8%B1%DA%86%D9%87-%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8-%D8%B1%D8%B4%D8%AA%D9%87-%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C-%D9%85%D8%B1%DA%A9%D8%B2-%D9%85%D8%B4%D8%A7%D9%88%D8%B1%D9%87-%D8%A2%D9%88%DB%8C%DA%98%D9%87.pdf"
+        source_id: "AVije"
+        authority: "C"
+  1403:
+    primary:
+      url: "https://www.sanjesh.org/"
+      source_id: "S001"
+      authority: "A"
+      note: "Official landing page; PDF attachment URL identified via publication page."
+    fallback:
+      - url: "https://easytest.ir/wp-content/uploads/%D8%AF%D9%81%D8%AA%D8%B1%DA%86%D9%87-%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8-%D8%B1%D8%B4%D8%AA%D9%87-%DA%AF%D8%B1%D9%88%D9%87-%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C-%D8%A2%D8%B2%D9%85%D9%88%D9%86-%D8%B3%D8%B1%D8%A7%D8%B3%D8%B1%DB%8C-1403-%D8%A7%DB%8C%D8%B2%DB%8C-%D8%AA%D8%B3%D8%AA.pdf"
+        source_id: "EasyTest"
+        authority: "C"
+extraction:
+  preserve_raw_pages: true
+  preserve_raw_tables: true
+  table_header_candidates:
+    - "کد رشته محل"
+    - "کدرشته محل"
+    - "عنوان رشته"
+    - "دوره تحصیلی"
+    - "نحوه پذیرش"
+  output_directory: "artifacts/historical_booklets"
+  rule: "No normalization may overwrite raw extracted values."
