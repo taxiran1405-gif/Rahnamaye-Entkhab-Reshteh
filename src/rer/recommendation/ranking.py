@@ -42,19 +42,27 @@ DEFAULT_WEIGHTS = {
     "quality": 2,
 }
 
+def _normalise_preference(value: float) -> float:
+    return value / 100.0 if value > 1.0 else value
+
 def utility_score(candidate: Candidate, weights: Dict[str, float] | None = None) -> float:
     w = weights or DEFAULT_WEIGHTS
     total_w = sum(w.values()) or 1.0
-    weighted = sum((w.get(k, 0.0) * candidate.preference_scores.get(k, 0.0)) for k in w)
+    weighted = sum(
+        w.get(k, 0.0) * _normalise_preference(candidate.preference_scores.get(k, 0.0))
+        for k in w
+    )
     return weighted / total_w
 
 def composite_score(candidate: Candidate, weights: Dict[str, float] | None = None) -> float:
-    # admission_midpoint and preference inputs are both normalized to [0,1].
     utility = utility_score(candidate, weights)
     return 0.60 * utility + 0.40 * candidate.admission_midpoint
 
 def rank_candidates(candidates: List[Candidate], weights: Dict[str, float] | None = None) -> List[RankedCandidate]:
-    ranked = sorted(candidates, key=lambda c: (-composite_score(c, weights), -c.confidence, c.option_id))
+    ranked = sorted(
+        candidates,
+        key=lambda c: (-composite_score(c, weights), -c.confidence, c.option_id),
+    )
     return [
         RankedCandidate(
             option_id=c.option_id,
@@ -67,12 +75,19 @@ def rank_candidates(candidates: List[Candidate], weights: Dict[str, float] | Non
         for c in ranked
     ]
 
-def compose_cell(candidates: List[Candidate], weights: Dict[str, float] | None = None, max_parallel: int = 3, max_cover: int = 1) -> RecommendationCell:
+def compose_cell(
+    candidates: List[Candidate],
+    weights: Dict[str, float] | None = None,
+    max_parallel: int = 3,
+    max_cover: int = 1,
+) -> RecommendationCell:
     if not candidates:
         raise ValueError("cell requires at least one candidate")
     ranked = rank_candidates(candidates, weights)
-    primary = ranked[0]
-    rest = ranked[1:]
-    parallel = [x for x in rest if x.role != "cover"][:max_parallel]
-    cover = [x for x in rest if x.role == "cover"][:max_cover]
+    normal = [x for x in ranked if x.role != "cover"]
+    covers = [x for x in ranked if x.role == "cover"]
+    primary = normal[0] if normal else ranked[0]
+    normal_rest = [x for x in normal if x.option_id != primary.option_id]
+    parallel = normal_rest[:max_parallel]
+    cover = covers[:max_cover]
     return RecommendationCell(candidates[0].cell_group_id, primary, parallel, cover)
