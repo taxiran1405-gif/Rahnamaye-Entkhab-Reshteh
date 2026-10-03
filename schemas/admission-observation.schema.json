@@ -1,16 +1,112 @@
 {
-  "$schema":"https://json-schema.org/draft/2020-12/schema",
-  "title":"AdmissionObservation",
-  "type":"object",
-  "required":["id","data_year","group","program_id","university_id","course_type","quota_type","region","cutoff_rank","source_ids","confidence","data_kind"],
-  "properties":{
-    "id":{"type":"string"},"data_year":{"type":"integer"},"academic_year":{"type":["integer","null"]},
-    "group":{"type":"string"},"program_id":{"type":"string"},"university_id":{"type":"string"},
-    "campus_id":{"type":["string","null"]},"course_type":{"type":"string"},"quota_type":{"type":"string"},
-    "region":{"type":["integer","string"]},"cutoff_rank":{"type":"number","minimum":1},
-    "source_ids":{"type":"array","items":{"type":"string"}},
-    "confidence":{"enum":["C4","C3","C2","C1","CX"]},
-    "sample_size":{"type":["integer","null"],"minimum":0},
-    "data_kind":{"enum":["official","reported_last_rank","approx_range","sample_card","aggregate"]}
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AdmissionObservation",
+  "type": "object",
+  "required": [
+    "id",
+    "data_year",
+    "group",
+    "program_id",
+    "university_id",
+    "course_type",
+    "quota_type",
+    "region",
+    "cutoff_rank",
+    "source_ids",
+    "confidence",
+    "data_kind",
+    "rank_basis"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "data_year": {
+      "type": "integer"
+    },
+    "academic_year": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "group": {
+      "type": "string"
+    },
+    "program_id": {
+      "type": "string"
+    },
+    "university_id": {
+      "type": "string"
+    },
+    "campus_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "course_type": {
+      "type": "string"
+    },
+    "quota_type": {
+      "type": "string"
+    },
+    "region": {
+      "type": [
+        "integer",
+        "string"
+      ]
+    },
+    "cutoff_rank": {
+      "type": "number",
+      "minimum": 1
+    },
+    "source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "confidence": {
+      "enum": [
+        "C4",
+        "C3",
+        "C2",
+        "C1",
+        "CX"
+      ]
+    },
+    "sample_size": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "data_kind": {
+      "enum": [
+        "official",
+        "reported_last_rank",
+        "approx_range",
+        "sample_card",
+        "aggregate"
+      ]
+    },
+    "rank_basis": {
+      "enum": [
+        "national_rank",
+        "quota_rank",
+        "final_quota_rank",
+        "regional_rank",
+        "special_quota_rank"
+      ]
+    },
+    "quota_population_size": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    }
   }
 }
