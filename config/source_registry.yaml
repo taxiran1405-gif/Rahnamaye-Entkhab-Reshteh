@@ -6,11 +6,6 @@ source_policy:
       url: https://www.sanjesh.org/
       authority: A
       domains: [rules, notices, admissions, booklets]
-    - id: KONKOURCOMPUTER
-      name: پایگاه تخصصی کنکور کامپیوتر
-      url: https://www.konkurcomputer.ir/
-      authority: C
-      rule: secondary_only
     - id: S002
       name: وزارت علوم، تحقیقات و فناوری
       url: https://www.msrt.ir/
@@ -44,6 +39,17 @@ source_policy:
       url: https://www.bls.gov/ooh/
       authority: B
       domains: [occupations, pay, outlook]
+  secondary_admission:
+    - id: NOVINGAM
+      name: نوین گام
+      url: https://novingam.com/
+      authority: C
+      rule: secondary_only_and_range_staging
+    - id: KONKOURCOMPUTER
+      name: پایگاه تخصصی کنکور کامپیوتر
+      url: https://www.konkurcomputer.ir/
+      authority: C
+      rule: secondary_only
 rules:
   - never_treat_secondary_cutoff_as_official
   - preserve_conflicting_values
