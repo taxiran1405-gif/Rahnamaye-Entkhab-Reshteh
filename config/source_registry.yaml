@@ -6,6 +6,11 @@ source_policy:
       url: https://www.sanjesh.org/
       authority: A
       domains: [rules, notices, admissions, booklets]
+    - id: KONKOURCOMPUTER
+      name: پایگاه تخصصی کنکور کامپیوتر
+      url: https://www.konkurcomputer.ir/
+      authority: C
+      rule: secondary_only
     - id: S002
       name: وزارت علوم، تحقیقات و فناوری
       url: https://www.msrt.ir/
