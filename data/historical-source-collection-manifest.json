@@ -1,0 +1,20 @@
+{
+  "version":"0.1",
+  "group":"math",
+  "years":[1400,1401,1402,1403],
+  "official_document_targets":[
+    {"year":1400,"kind":"selection_booklet_math","source_id":"S001","status":"discovery"},
+    {"year":1401,"kind":"selection_booklet_math","source_id":"S001","status":"discovery"},
+    {"year":1402,"kind":"selection_booklet_math","source_id":"S001","status":"discovery","mirror_evidence":"https://t.me/s/sazemansanjesh?before=3688"},
+    {"year":1403,"kind":"selection_booklet_math","source_id":"S001","status":"discovery","mirror_evidence":"https://t.me/s/sazemansanjesh?before=4239"}
+  ],
+  "secondary_admission_targets":[
+    {"program_id":"PF-CSE","source":"NovinGam"},
+    {"program_id":"PF-EE","source":"NovinGam"},
+    {"program_id":"PF-ME","source":"NovinGam"},
+    {"program_id":"PF-CE","source":"NovinGam"},
+    {"program_id":"PF-IND","source":"NovinGam"},
+    {"program_id":"PF-CS","source":"NovinGam"}
+  ],
+  "important_rule":"Web page images/sample cards are staging evidence; they are not canonical last-rank values without extraction and verification."
+}
