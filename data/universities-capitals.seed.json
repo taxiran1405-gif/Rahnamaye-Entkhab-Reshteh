@@ -1,0 +1,467 @@
+{
+  "version": "0.1",
+  "status": "seed_provisional",
+  "scope": "provincial_capitals_plus_major_regional_centers",
+  "records": [
+    {
+      "id": "U-TEH-001",
+      "name_fa": "دانشگاه تهران",
+      "province": "تهران",
+      "city": "تهران",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-TEH-002",
+      "name_fa": "دانشگاه صنعتی شریف",
+      "province": "تهران",
+      "city": "تهران",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-TEH-003",
+      "name_fa": "دانشگاه صنعتی امیرکبیر",
+      "province": "تهران",
+      "city": "تهران",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-TEH-004",
+      "name_fa": "دانشگاه علم و صنعت ایران",
+      "province": "تهران",
+      "city": "تهران",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-TEH-005",
+      "name_fa": "دانشگاه صنعتی خواجه نصیرالدین طوسی",
+      "province": "تهران",
+      "city": "تهران",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-TEH-006",
+      "name_fa": "دانشگاه شهید بهشتی",
+      "province": "تهران",
+      "city": "تهران",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-TEH-007",
+      "name_fa": "دانشگاه خوارزمی",
+      "province": "تهران",
+      "city": "تهران",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "special_case",
+      "notes": "پردیس کرج جداگانه مدل شود."
+    },
+    {
+      "id": "U-AZE-001",
+      "name_fa": "دانشگاه تبریز",
+      "province": "آذربایجان شرقی",
+      "city": "تبریز",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-AZE-002",
+      "name_fa": "دانشگاه صنعتی سهند",
+      "province": "آذربایجان شرقی",
+      "city": "سهند",
+      "scope": "regional_major_center",
+      "governance": "وزارت علوم",
+      "location_status": "special_case",
+      "notes": "پردیس اصلی در شهر سهند و مرتبط با منطقه تبریز."
+    },
+    {
+      "id": "U-WAZ-001",
+      "name_fa": "دانشگاه ارومیه",
+      "province": "آذربایجان غربی",
+      "city": "ارومیه",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-WAZ-002",
+      "name_fa": "دانشگاه صنعتی ارومیه",
+      "province": "آذربایجان غربی",
+      "city": "ارومیه",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-ARD-001",
+      "name_fa": "دانشگاه محقق اردبیلی",
+      "province": "اردبیل",
+      "city": "اردبیل",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-ISF-001",
+      "name_fa": "دانشگاه اصفهان",
+      "province": "اصفهان",
+      "city": "اصفهان",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-ISF-002",
+      "name_fa": "دانشگاه صنعتی اصفهان",
+      "province": "اصفهان",
+      "city": "خمینی‌شهر",
+      "scope": "regional_major_center",
+      "governance": "وزارت علوم",
+      "location_status": "special_case",
+      "notes": "شهر مؤسسه از شهر اصفهان جدا ذخیره شود."
+    },
+    {
+      "id": "U-ALB-001",
+      "name_fa": "دانشگاه خوارزمی - پردیس کرج",
+      "province": "البرز",
+      "city": "کرج",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "campus_record",
+      "notes": "institution_id به دانشگاه خوارزمی متصل شود."
+    },
+    {
+      "id": "U-ILA-001",
+      "name_fa": "دانشگاه ایلام",
+      "province": "ایلام",
+      "city": "ایلام",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-BUS-001",
+      "name_fa": "دانشگاه خلیج فارس",
+      "province": "بوشهر",
+      "city": "بوشهر",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-CHB-001",
+      "name_fa": "دانشگاه شهرکرد",
+      "province": "چهارمحال و بختیاری",
+      "city": "شهرکرد",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-SKH-001",
+      "name_fa": "دانشگاه بیرجند",
+      "province": "خراسان جنوبی",
+      "city": "بیرجند",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-RKH-001",
+      "name_fa": "دانشگاه فردوسی مشهد",
+      "province": "خراسان رضوی",
+      "city": "مشهد",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-NKH-001",
+      "name_fa": "دانشگاه بجنورد",
+      "province": "خراسان شمالی",
+      "city": "بجنورد",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-KHU-001",
+      "name_fa": "دانشگاه شهید چمران اهواز",
+      "province": "خوزستان",
+      "city": "اهواز",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-ZAN-001",
+      "name_fa": "دانشگاه زنجان",
+      "province": "زنجان",
+      "city": "زنجان",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-SEM-001",
+      "name_fa": "دانشگاه سمنان",
+      "province": "سمنان",
+      "city": "سمنان",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-SIS-001",
+      "name_fa": "دانشگاه سیستان و بلوچستان",
+      "province": "سیستان و بلوچستان",
+      "city": "زاهدان",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-FAR-001",
+      "name_fa": "دانشگاه شیراز",
+      "province": "فارس",
+      "city": "شیراز",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-FAR-002",
+      "name_fa": "دانشگاه صنعتی شیراز",
+      "province": "فارس",
+      "city": "شیراز",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-QAZ-001",
+      "name_fa": "دانشگاه بین‌المللی امام خمینی (ره)",
+      "province": "قزوین",
+      "city": "قزوین",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-QOM-001",
+      "name_fa": "دانشگاه قم",
+      "province": "قم",
+      "city": "قم",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-QOM-002",
+      "name_fa": "دانشگاه صنعتی قم",
+      "province": "قم",
+      "city": "قم",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-KUR-001",
+      "name_fa": "دانشگاه کردستان",
+      "province": "کردستان",
+      "city": "سنندج",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-KER-001",
+      "name_fa": "دانشگاه شهید باهنر کرمان",
+      "province": "کرمان",
+      "city": "کرمان",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-KRM-001",
+      "name_fa": "دانشگاه رازی",
+      "province": "کرمانشاه",
+      "city": "کرمانشاه",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-KBH-001",
+      "name_fa": "دانشگاه یاسوج",
+      "province": "کهگیلویه و بویراحمد",
+      "city": "یاسوج",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-GOL-001",
+      "name_fa": "دانشگاه گلستان",
+      "province": "گلستان",
+      "city": "گرگان",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-GOL-002",
+      "name_fa": "دانشگاه علوم کشاورزی و منابع طبیعی گرگان",
+      "province": "گلستان",
+      "city": "گرگان",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-GIL-001",
+      "name_fa": "دانشگاه گیلان",
+      "province": "گیلان",
+      "city": "رشت",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-LOR-001",
+      "name_fa": "دانشگاه لرستان",
+      "province": "لرستان",
+      "city": "خرم‌آباد",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-MAZ-001",
+      "name_fa": "دانشگاه علوم کشاورزی و منابع طبیعی ساری",
+      "province": "مازندران",
+      "city": "ساری",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-MAZ-002",
+      "name_fa": "دانشگاه مازندران",
+      "province": "مازندران",
+      "city": "بابلسر",
+      "scope": "regional_major_center",
+      "governance": "وزارت علوم",
+      "location_status": "verified_secondary",
+      "notes": null
+    },
+    {
+      "id": "U-MAZ-003",
+      "name_fa": "دانشگاه صنعتی نوشیروانی بابل",
+      "province": "مازندران",
+      "city": "بابل",
+      "scope": "regional_major_center",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-MRK-001",
+      "name_fa": "دانشگاه اراک",
+      "province": "مرکزی",
+      "city": "اراک",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-HOR-001",
+      "name_fa": "دانشگاه هرمزگان",
+      "province": "هرمزگان",
+      "city": "بندرعباس",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-HAM-001",
+      "name_fa": "دانشگاه بوعلی سینا",
+      "province": "همدان",
+      "city": "همدان",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-YAZ-001",
+      "name_fa": "دانشگاه یزد",
+      "province": "یزد",
+      "city": "یزد",
+      "scope": "provincial_capital_public",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    },
+    {
+      "id": "U-MAR-001",
+      "name_fa": "دانشگاه کاشان",
+      "province": "اصفهان",
+      "city": "کاشان",
+      "scope": "regional_major_center",
+      "governance": "وزارت علوم",
+      "location_status": "verified_seed",
+      "notes": null
+    }
+  ]
+}
