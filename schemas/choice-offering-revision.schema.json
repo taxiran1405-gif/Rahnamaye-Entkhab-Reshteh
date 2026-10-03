@@ -1,0 +1,21 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"ChoiceOfferingRevision",
+  "type":"object",
+  "required":["revision_id","admission_year","group","choice_code","operation","source_id","status"],
+  "properties":{
+    "revision_id":{"type":"string"},
+    "admission_year":{"type":"integer"},
+    "group":{"type":"string"},
+    "choice_code":{"type":"string"},
+    "operation":{"enum":["ADD","CHANGE","DELETE"]},
+    "fields_before":{"type":["object","null"]},
+    "fields_after":{"type":["object","null"]},
+    "notice_id":{"type":["string","null"]},
+    "source_id":{"type":"string"},
+    "source_locator":{"type":["string","null"]},
+    "effective_date":{"type":["string","null"]},
+    "status":{"enum":["verified","provisional","conflicting","superseded","needs-review"]}
+  },
+  "additionalProperties":false
+}
