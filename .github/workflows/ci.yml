@@ -16,5 +16,7 @@ jobs:
           python-version: "3.11"
       - name: Validate seed data
         run: python scripts/validate_seed.py
+      - name: Run backtest coverage audit
+        run: python scripts/backtest_admission.py
       - name: Run unit tests
         run: PYTHONPATH=src python -m unittest discover -s tests -v
