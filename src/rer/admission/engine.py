@@ -42,3 +42,43 @@ def estimate_probability_band(rank: float, observations: Iterable[AdmissionObser
     half=min(0.45,max(0.08,spread/2.0))
     cuts=[o.cutoff_rank for o in obs]
     return ProbabilityBand(max(0.0,midpoint-half),min(1.0,midpoint+half),midpoint,len(obs),median(cuts),min(cuts),max(cuts))
+
+
+def estimate_probability_for_quota_context(
+    candidate_rank_context,
+    candidate_quota_type: str,
+    candidate_region: Optional[str],
+    observations: Iterable[dict],
+) -> ProbabilityBand:
+    """Estimate only from observations comparable to the candidate's final quota.
+
+    This wrapper is the safety boundary around the legacy heuristic: it prevents
+    national-rank or cross-region observations from silently entering a quota-based
+    cutoff calculation.
+    """
+    from .quota import filter_comparable_observations, select_candidate_rank
+
+    decision = select_candidate_rank(
+        candidate_rank_context, candidate_quota_type, candidate_region
+    )
+    if not decision.comparable or decision.rank is None:
+        return ProbabilityBand(0.0, 0.0, 0.0, 0, None, None, None, "insufficient_quota_rank")
+
+    comparable = filter_comparable_observations(
+        candidate_rank_context, observations
+    )
+    if not comparable:
+        return ProbabilityBand(
+            0.0, 0.0, 0.0, 0, None, None, None, "no_exact_quota_observations"
+        )
+
+    typed = [
+        AdmissionObservation(
+            year=int(row["data_year"]),
+            cutoff_rank=float(row["cutoff_rank"]),
+            source_confidence=float(row.get("source_confidence", 1.0)),
+            sample_weight=float(row.get("sample_weight", 1.0)),
+        )
+        for row in comparable
+    ]
+    return estimate_probability_band(decision.rank, typed)
