@@ -39,6 +39,27 @@ source_policy:
       url: https://www.bls.gov/ooh/
       authority: B
       domains: [occupations, pay, outlook]
+  historical_archive:
+    - id: SANJESH-ARCHIVE
+      name: آرشیو بازنشر اطلاعیه‌های سنجش
+      url: https://t.me/s/sazemansanjesh
+      authority: C
+      rule: archival_only
+    - id: IRANTAHsil
+      name: ایران تحصیل
+      url: https://irantahsil.org/
+      authority: C
+      rule: secondary_only
+    - id: AVije
+      name: آویژه
+      url: https://avije.org/
+      authority: C
+      rule: secondary_only
+    - id: EasyTest
+      name: ایزی تست
+      url: https://easytest.ir/
+      authority: C
+      rule: secondary_only
   secondary_admission:
     - id: NOVINGAM
       name: نوین گام
