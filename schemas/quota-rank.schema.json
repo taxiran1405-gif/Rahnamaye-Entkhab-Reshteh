@@ -1,0 +1,15 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"QuotaRankContext",
+  "type":"object",
+  "required":["quota_type","rank"],
+  "properties":{
+    "quota_type":{"type":"string","minLength":1},
+    "rank":{"type":"integer","minimum":1},
+    "region":{"type":["integer","string","null"]},
+    "is_final":{"type":"boolean"},
+    "source_id":{"type":["string","null"]},
+    "verification_status":{"enum":["verified","provisional","conflicting","needs-review"]}
+  },
+  "additionalProperties":false
+}
