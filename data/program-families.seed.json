@@ -1,0 +1,63 @@
+{
+  "version": "0.1",
+  "status": "seed",
+  "records": [
+    {
+      "id": "PF-CSE",
+      "name_fa": "مهندسی کامپیوتر",
+      "aliases": [
+        "کامپیوتر"
+      ],
+      "group": "math",
+      "occupation_mapping_status": "pending"
+    },
+    {
+      "id": "PF-EE",
+      "name_fa": "مهندسی برق",
+      "aliases": [
+        "برق",
+        "الکترونیک",
+        "مخابرات"
+      ],
+      "group": "math",
+      "occupation_mapping_status": "pending"
+    },
+    {
+      "id": "PF-ME",
+      "name_fa": "مهندسی مکانیک",
+      "aliases": [
+        "مکانیک"
+      ],
+      "group": "math",
+      "occupation_mapping_status": "pending"
+    },
+    {
+      "id": "PF-CE",
+      "name_fa": "مهندسی عمران",
+      "aliases": [
+        "عمران"
+      ],
+      "group": "math",
+      "occupation_mapping_status": "pending"
+    },
+    {
+      "id": "PF-IND",
+      "name_fa": "مهندسی صنایع",
+      "aliases": [
+        "صنایع"
+      ],
+      "group": "math",
+      "occupation_mapping_status": "pending"
+    },
+    {
+      "id": "PF-ENG",
+      "name_fa": "زبان و ادبیات انگلیسی / آموزش زبان انگلیسی",
+      "aliases": [
+        "انگلیسی",
+        "آموزش زبان"
+      ],
+      "group": "language",
+      "occupation_mapping_status": "pending"
+    }
+  ]
+}
