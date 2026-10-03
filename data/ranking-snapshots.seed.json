@@ -1,0 +1,17 @@
+{
+  "version": "0.1",
+  "status": "current-reference-seed",
+  "note": "These are source-edition examples for the ranking layer. They are not a composite score and must not be interpreted as a single scientific ranking.",
+  "records": [
+    {"university_id":"U-TEH-001","source":"QS","edition":2026,"rank":"322","source_url":"https://www.topuniversities.com/universities/university-tehran"},
+    {"university_id":"U-TEH-002","source":"QS","edition":2026,"rank":"375","source_url":"https://www.topuniversities.com/universities/sharif-university-technology"},
+    {"university_id":"U-TEH-003","source":"QS","edition":2026,"rank":"456","source_url":"https://www.topuniversities.com/universities/amirkabir-university-technology"},
+    {"university_id":"U-TEH-004","source":"QS","edition":2026,"rank":"496","source_url":"https://www.topuniversities.com/universities/iran-university-science-technology"},
+    {"university_id":"U-FAR-001","source":"QS","edition":2026,"rank":"701-710","source_url":"https://www.topuniversities.com/universities/shiraz-university"},
+    {"university_id":"U-TEH-001","source":"QS","edition":2027,"rank":"367","source_url":"https://www.topuniversities.com/universities/university-tehran"},
+    {"university_id":"U-TEH-002","source":"QS","edition":2027,"rank":"390","source_url":"https://www.topuniversities.com/universities/sharif-university-technology"},
+    {"university_id":"U-TEH-003","source":"QS","edition":2027,"rank":"483","source_url":"https://www.topuniversities.com/universities/amirkabir-university-technology"},
+    {"university_id":"U-TEH-004","source":"QS","edition":2027,"rank":"504","source_url":"https://www.topuniversities.com/universities/iran-university-science-technology"},
+    {"university_id":"U-FAR-001","source":"QS","edition":2027,"rank":"791-800","source_url":"https://www.topuniversities.com/universities/shiraz-university"}
+  ]
+}
