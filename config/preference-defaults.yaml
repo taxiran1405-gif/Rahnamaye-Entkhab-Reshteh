@@ -1,0 +1,12 @@
+version: 0.1
+weights:
+  major_interest: 25
+  university_interest: 15
+  city_interest: 10
+  admission_probability: 25
+  course_type: 10
+  cost: 5
+  job_market: 5
+  distance: 3
+  quality: 2
+normalization: "UI values [0,100], internal values [0,1]"
