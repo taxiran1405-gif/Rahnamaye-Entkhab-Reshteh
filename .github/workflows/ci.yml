@@ -18,5 +18,8 @@ jobs:
         run: python scripts/validate_seed.py
       - name: Run backtest coverage audit
         run: python scripts/backtest_admission.py
+      - name: Validate outcome template
+        run: python scripts/validate_outcomes.py --input data/outcomes/outcome-template.jsonl
+        continue-on-error: true
       - name: Run unit tests
         run: PYTHONPATH=src python -m unittest discover -s tests -v
