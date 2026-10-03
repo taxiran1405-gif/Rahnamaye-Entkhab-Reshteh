@@ -1,0 +1,27 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"RawChoiceOffering",
+  "type":"object",
+  "required":["raw_id","admission_year","group","choice_code","raw_program_title","raw_university_title","raw_course_type","source_id","status"],
+  "properties":{
+    "raw_id":{"type":"string"},
+    "admission_year":{"type":"integer"},
+    "group":{"type":"string"},
+    "choice_code":{"type":"string"},
+    "raw_program_title":{"type":"string","minLength":1},
+    "raw_university_title":{"type":"string","minLength":1},
+    "raw_campus_title":{"type":["string","null"]},
+    "raw_city_title":{"type":["string","null"]},
+    "raw_course_type":{"type":"string"},
+    "raw_selection_method":{"type":["string","null"]},
+    "raw_native_selection":{"type":["string","null"]},
+    "capacity_text":{"type":["string","null"]},
+    "gender_text":{"type":["string","null"]},
+    "notes_raw":{"type":["string","null"]},
+    "source_id":{"type":"string"},
+    "source_locator":{"type":["string","null"]},
+    "source_snapshot_hash":{"type":["string","null"]},
+    "status":{"enum":["raw","needs-review","mapped","conflicting","rejected"]}
+  },
+  "additionalProperties":true
+}
