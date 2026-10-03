@@ -1,0 +1,48 @@
+{
+  "version": "0.1",
+  "purpose": "source_sentinel_watchlist",
+  "schedules": [
+    {
+      "cadence": "every_6_hours",
+      "note": "GitHub scheduled workflow; external 24x7 scheduler remains a production hardening item."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S001",
+      "name": "سازمان سنجش آموزش کشور",
+      "url": "https://www.sanjesh.org/",
+      "impact": "CRITICAL"
+    },
+    {
+      "id": "S002",
+      "name": "وزارت علوم، تحقیقات و فناوری",
+      "url": "https://www.msrt.ir/",
+      "impact": "HIGH"
+    },
+    {
+      "id": "QS",
+      "name": "QS",
+      "url": "https://www.topuniversities.com/world-university-rankings",
+      "impact": "MEDIUM"
+    },
+    {
+      "id": "THE",
+      "name": "Times Higher Education",
+      "url": "https://www.timeshighereducation.com/world-university-rankings",
+      "impact": "MEDIUM"
+    },
+    {
+      "id": "WEF",
+      "name": "World Economic Forum",
+      "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/",
+      "impact": "MEDIUM"
+    },
+    {
+      "id": "BLS",
+      "name": "U.S. Bureau of Labor Statistics",
+      "url": "https://www.bls.gov/ooh/",
+      "impact": "MEDIUM"
+    }
+  ]
+}
