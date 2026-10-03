@@ -7,16 +7,41 @@ on:
 
 jobs:
   extract:
+    name: Extract math booklet ${{ matrix.year }}
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        year: [1400, 1401, 1402, 1403]
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install PyYAML pdfplumber
-      - run: python scripts/fetch_and_extract_booklets.py
-      - uses: actions/upload-artifact@v4
+
+      - name: Install extraction dependencies
+        run: pip install PyYAML pdfplumber
+
+      - name: Extract booklet
+        run: |
+          mkdir -p artifacts/historical_booklets
+          python scripts/fetch_and_extract_booklets.py             --year ${{ matrix.year }}             --output artifacts/historical_booklets
+
+      - name: Validate extraction manifest
+        run: |
+          python scripts/validate_extracted_corpus.py             --manifest artifacts/historical_booklets/manifest.json             --year ${{ matrix.year }}
+
+      - name: Upload yearly artifact
+        uses: actions/upload-artifact@v4
         with:
-          name: historical-math-booklets
-          path: artifacts/historical_booklets
+          name: historical-math-booklet-${{ matrix.year }}
+          path: artifacts/historical_booklets/${{ matrix.year }}
+          retention-days: 30
+
+      - name: Upload yearly manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: historical-math-manifest-${{ matrix.year }}
+          path: artifacts/historical_booklets/manifest.json
           retention-days: 30
