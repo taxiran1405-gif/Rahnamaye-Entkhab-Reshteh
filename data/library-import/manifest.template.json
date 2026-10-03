@@ -1,0 +1,16 @@
+{
+  "version":"0.1",
+  "import_batch_id":"REPLACE_WITH_BATCH_ID",
+  "input_format":"jsonl",
+  "generated_from":"کتابخانه_دانش_مشاور_انتخاب_رشته_P0_v1.0.xlsx",
+  "status":"template_only",
+  "sheets_expected":[
+    "منابع","داده_اولیه_قبولی","رتبه_دانشگاه","قواعد_AI",
+    "آخرین_رتبه_قبولی","ردیابی_منابع_رتبه","داده_تازه_1404",
+    "مدل_ترجیحات_داوطلب","وزن_عوامل","الگوریتم_مشاوره",
+    "فرم_داوطلب","فرم_نتیجه_واقعی","فرم_ارزیابی"
+  ],
+  "rows_file":"rows.jsonl",
+  "generated_at":"2026-10-03",
+  "note":"This manifest is intentionally empty of workbook-derived rows until a readable export is available."
+}
