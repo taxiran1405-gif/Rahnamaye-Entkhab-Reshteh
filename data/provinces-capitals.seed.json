@@ -1,0 +1,192 @@
+{
+  "version": "0.1",
+  "status": "seed_provisional",
+  "records": [
+    {
+      "id": "PRV-01",
+      "province": "آذربایجان شرقی",
+      "capital": "تبریز",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-02",
+      "province": "آذربایجان غربی",
+      "capital": "ارومیه",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-03",
+      "province": "اردبیل",
+      "capital": "اردبیل",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-04",
+      "province": "اصفهان",
+      "capital": "اصفهان",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-05",
+      "province": "البرز",
+      "capital": "کرج",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-06",
+      "province": "ایلام",
+      "capital": "ایلام",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-07",
+      "province": "بوشهر",
+      "capital": "بوشهر",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-08",
+      "province": "تهران",
+      "capital": "تهران",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-09",
+      "province": "چهارمحال و بختیاری",
+      "capital": "شهرکرد",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-10",
+      "province": "خراسان جنوبی",
+      "capital": "بیرجند",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-11",
+      "province": "خراسان رضوی",
+      "capital": "مشهد",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-12",
+      "province": "خراسان شمالی",
+      "capital": "بجنورد",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-13",
+      "province": "خوزستان",
+      "capital": "اهواز",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-14",
+      "province": "زنجان",
+      "capital": "زنجان",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-15",
+      "province": "سمنان",
+      "capital": "سمنان",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-16",
+      "province": "سیستان و بلوچستان",
+      "capital": "زاهدان",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-17",
+      "province": "فارس",
+      "capital": "شیراز",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-18",
+      "province": "قزوین",
+      "capital": "قزوین",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-19",
+      "province": "قم",
+      "capital": "قم",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-20",
+      "province": "کردستان",
+      "capital": "سنندج",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-21",
+      "province": "کرمان",
+      "capital": "کرمان",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-22",
+      "province": "کرمانشاه",
+      "capital": "کرمانشاه",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-23",
+      "province": "کهگیلویه و بویراحمد",
+      "capital": "یاسوج",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-24",
+      "province": "گلستان",
+      "capital": "گرگان",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-25",
+      "province": "گیلان",
+      "capital": "رشت",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-26",
+      "province": "لرستان",
+      "capital": "خرم‌آباد",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-27",
+      "province": "مازندران",
+      "capital": "ساری",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-28",
+      "province": "مرکزی",
+      "capital": "اراک",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-29",
+      "province": "هرمزگان",
+      "capital": "بندرعباس",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-30",
+      "province": "همدان",
+      "capital": "همدان",
+      "scope": "all_31_provincial_capitals"
+    },
+    {
+      "id": "PRV-31",
+      "province": "یزد",
+      "capital": "یزد",
+      "scope": "all_31_provincial_capitals"
+    }
+  ]
+}
