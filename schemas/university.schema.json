@@ -1,0 +1,16 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"University",
+  "type":"object",
+  "required":["id","name_fa","province","city","scope","governance","location_status"],
+  "properties":{
+    "id":{"type":"string"},
+    "name_fa":{"type":"string"},
+    "province":{"type":"string"},
+    "city":{"type":"string"},
+    "scope":{"enum":["provincial_capital_public","regional_major_center"]},
+    "governance":{"type":"string"},
+    "location_status":{"enum":["verified_seed","verified_secondary","campus_record","special_case","needs_official_verification"]},
+    "notes":{"type":["string","null"]}
+  }
+}
