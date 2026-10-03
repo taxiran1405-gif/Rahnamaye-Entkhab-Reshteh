@@ -73,6 +73,7 @@ def main():
             continue
         yd=outdir/str(year); yd.mkdir(parents=True,exist_ok=True)
         pdf=yd/f"math-selection-{year}.pdf"; pdf.write_bytes(data)
+        (yd/"source-meta.json").write_text(json.dumps({"year":year,"source_used":used,"fetch_errors":errors},ensure_ascii=False,indent=2),encoding="utf-8")
         item={"year":year,"status":"downloaded","source_used":used,"bytes":len(data),"fetch_errors":errors}
         try:
             item.update(extract(pdf,year,outdir)); item["status"]="extracted"
