@@ -121,6 +121,50 @@
         }
       },
       "additionalProperties": false
+    },
+    "score_context": {
+      "type": "object",
+      "properties": {
+        "final_total_score": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "exam_specific_total": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "academic_record_total": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "score_effective_year": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "source_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "verification_status": {
+          "enum": [
+            "verified",
+            "provisional",
+            "conflicting",
+            "needs-review"
+          ]
+        }
+      },
+      "additionalProperties": false
     }
   }
 }
