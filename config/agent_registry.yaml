@@ -16,6 +16,10 @@ agents:
     name: admission_statistics
     type: analytics
     criticality: critical
+    responsibilities:
+      - quota_aware_cutoff_analysis
+      - exact_quota_region_matching
+      - national_vs_quota_rank_separation
   - id: A03
     name: university_academic_quality
     type: analytics
@@ -40,6 +44,11 @@ agents:
     name: geography_eligibility
     type: rules
     criticality: critical
+    responsibilities:
+      - final_quota_resolution
+      - region_resolution
+      - quota_eligibility
+      - quota_rule_versioning
   - id: A09
     name: recommendation_engine
     type: deterministic_service
