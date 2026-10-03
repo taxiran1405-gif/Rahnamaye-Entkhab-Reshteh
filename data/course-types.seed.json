@@ -1,0 +1,18 @@
+[
+  {
+    "id": "CT-DAILY",
+    "name_fa": "روزانه"
+  },
+  {
+    "id": "CT-SECOND",
+    "name_fa": "نوبت دوم"
+  },
+  {
+    "id": "CT-CAMPUS",
+    "name_fa": "پردیس خودگردان"
+  },
+  {
+    "id": "CT-OTHER",
+    "name_fa": "سایر"
+  }
+]
