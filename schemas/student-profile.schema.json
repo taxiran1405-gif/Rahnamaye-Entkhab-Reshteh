@@ -1,0 +1,18 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"StudentProfile",
+  "type":"object",
+  "required":["target_year","group","national_rank","quota_type","region"],
+  "properties":{
+    "target_year":{"type":"integer"},"group":{"type":"string"},
+    "national_rank":{"type":"integer","minimum":1},"quota_rank":{"type":["integer","null"],"minimum":1},
+    "quota_type":{"type":"string"},"region":{"type":["integer","string"]},
+    "desired_programs":{"type":"array","items":{"type":"string"}},
+    "preferred_universities":{"type":"array","items":{"type":"string"}},
+    "preferred_cities":{"type":"array","items":{"type":"string"}},
+    "allowed_course_types":{"type":"array","items":{"type":"string"}},
+    "tuition_limit":{"type":["number","null"],"minimum":0},
+    "need_dorm":{"type":["boolean","null"]},
+    "preference_weights":{"type":"object","additionalProperties":{"type":"number","minimum":0,"maximum":100}}
+  }
+}
