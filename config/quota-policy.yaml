@@ -1,0 +1,88 @@
+version: "0.1"
+target_year: 1406
+purpose: "quota-aware admission and recommendation policy"
+
+core_principles:
+  - "final_quota_rank_is_a_primary_admission_feature"
+  - "national_rank_is_not_a_substitute_for_quota_rank"
+  - "compare_cutoffs_only_with_the_same_rank_basis"
+  - "same_quota_type_and_same_region_are_preferred_for_historical_comparison"
+  - "special_quota_data_must_not_be_imputed_from_region_data"
+  - "quota_rules_are_versioned_by_admission_year"
+  - "official_final_quota_from_the_candidate_card_is_authoritative_when_available"
+  - "uncertainty_in_quota_mapping_blocks_high-confidence_publication"
+
+rank_bases:
+  national_rank: diagnostic_secondary
+  final_quota_rank: primary
+  regional_rank: primary_for_region_quota
+  special_quota_rank: primary_for_same_special_quota
+
+quota_types:
+  region:
+    requires_region: true
+    rank_basis: regional_rank
+    fallback_to_national_rank: false
+  5_percent_esaargar:
+    requires_region: false
+    rank_basis: special_quota_rank
+    fallback_to_national_rank: false
+  25_percent_esaargar:
+    requires_region: false
+    rank_basis: special_quota_rank
+    fallback_to_national_rank: false
+  veterans:
+    requires_region: false
+    rank_basis: special_quota_rank
+    fallback_to_national_rank: false
+  family_of_martyrs:
+    requires_region: false
+    rank_basis: special_quota_rank
+    fallback_to_national_rank: false
+  other:
+    requires_region: false
+    rank_basis: special_quota_rank
+    fallback_to_national_rank: false
+
+resolution:
+  input_priority:
+    - official_final_quota_type
+    - official_final_quota_rank
+    - official_region
+    - verified_candidate_card
+    - provisional_self_report
+  ambiguous_quota_status: needs-review
+  conflicting_quota_status: conflicting
+  missing_quota_rank_status: no_quota_rank
+  national_rank_only_status: insufficient_for_quota_cutoff_comparison
+
+candidate_comparison:
+  exact_match:
+    quota_type: true
+    region_when_required: true
+    rank_basis: true
+    course_type: true
+    program: true
+    university: true
+    data_year: true
+  mismatch:
+    action: exclude_from_direct_cutoff_model
+
+probability:
+  rank_distance_feature: use_selected_quota_rank
+  national_rank_feature: secondary_diagnostic_only
+  missing_quota_rank: do_not_substitute_national_rank
+  sparse_special_quota: widen_uncertainty_and_lower_confidence
+
+ui_requirements:
+  show:
+    - "نوع سهمیه"
+    - "رتبه در سهمیه نهایی"
+    - "منطقه"
+    - "رتبه کشوری"
+    - "مبنای رتبه تاریخی"
+    - "تعداد داده هم‌سهمیه"
+    - "سطح اطمینان"
+  warning:
+    - "رتبه کشوری به‌تنهایی جایگزین رتبه در سهمیه نمی‌شود"
+    - "مقایسه با سهمیه دیگر ممکن است فقط زمینه‌ای باشد و مبنای احتمال قبولی نیست"
