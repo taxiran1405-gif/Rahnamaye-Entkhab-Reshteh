@@ -1,4 +1,4 @@
-version: 0.1
+version: 0.2
 source_policy:
   primary:
     - id: S001
@@ -11,6 +11,12 @@ source_policy:
       url: https://www.msrt.ir/
       authority: A
       domains: [higher_education, programs, policy]
+  internal:
+    - id: LIB-P0
+      name: کتابخانه دانش مشاور انتخاب رشته P0
+      url: null
+      authority: C
+      rule: provisional_only
   university_rankings:
     - id: QS
       url: https://www.topuniversities.com/
@@ -33,7 +39,6 @@ source_policy:
       url: https://www.bls.gov/ooh/
       authority: B
       domains: [occupations, pay, outlook]
-
 rules:
   - never_treat_secondary_cutoff_as_official
   - preserve_conflicting_values
@@ -43,3 +48,4 @@ rules:
   - require_course_type_for_admission_records
   - require_country_and_currency_for_income
   - no_unsourced_numeric_claims
+  - internal_library_data_never_overrides_primary_source
