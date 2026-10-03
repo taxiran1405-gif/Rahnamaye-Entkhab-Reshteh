@@ -1,0 +1,33 @@
+version: "0.1"
+target_group: math
+years: [1400,1401,1402,1403]
+
+layers:
+  offering_catalog:
+    purpose: all_published_choice_codes_for_math_group
+    primary_source: S001
+    required_artifacts:
+      - selection_booklet_math
+      - appendices_and_corrections
+      - new_choice_codes
+      - deleted_or_changed_choice_codes
+    dimensions: [admission_year,group,choice_code,program,university,campus,course_type,selection_method,city,native_selection_type,capacity]
+  admission_history:
+    priority:
+      1: official_post_result_data
+      2: outcome_linked_candidate_cards
+      3: multiple_secondary_sources
+      4: single_secondary_source
+    dimensions: [admission_year,program,university,course_type,quota_type,region,rank_basis]
+    rule: single_secondary_source_never_becomes_official_cutoff
+  outcomes:
+    required_fields: [candidate_anonymous_id,admission_year,quota_type,region,actual_quota_rank,choice_code,selected_choice_order,accepted,source_evidence]
+    leakage_control: [prediction_snapshot_locked_before_result,post_result_features_excluded]
+
+collection_status:
+  1400: offering_catalog=needs_collection admission_history=partial outcomes=missing
+  1401: offering_catalog=needs_collection admission_history=partial outcomes=missing
+  1402: offering_catalog=needs_collection admission_history=partial outcomes=missing
+  1403: offering_catalog=needs_collection admission_history=partial outcomes=missing
+
+release_rule: "No five-year publication until annual offering catalogs are loaded and material admission-history gaps are quantified."
