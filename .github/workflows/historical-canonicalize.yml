@@ -33,6 +33,14 @@ jobs:
         run: python scripts/build_raw_choice_catalog.py --input artifacts/raw/${{ matrix.year }}/${{ matrix.year }}-candidate-rows.jsonl --output artifacts/canonical/${{ matrix.year }}/raw-choice-offerings.jsonl
       - name: Conservative mapping
         run: python scripts/map_raw_choice_catalog.py --raw artifacts/canonical/${{ matrix.year }}/raw-choice-offerings.jsonl --programs data/program-families.seed.json --universities data/universities-capitals.seed.json --mapped-output artifacts/canonical/${{ matrix.year }}/mapped.jsonl --review-output artifacts/canonical/${{ matrix.year }}/needs-review.jsonl
+      - name: Resolve actual source id
+        id: source
+        shell: bash
+        run: echo "source_id=$(python -c 'import json; print(json.load(open(\"artifacts/raw/${{ matrix.year }}/source-meta.json\"))[\"source_used\"][\"source_id\"] )')" >> "$GITHUB_OUTPUT"
+      - name: Build canonical offering
+        run: python scripts/build_canonical_offering.py --mapped artifacts/canonical/${{ matrix.year }}/mapped.jsonl --universities data/universities-capitals.seed.json --source-id ${{ steps.source.outputs.source_id }} --output artifacts/canonical/${{ matrix.year }}/canonical.jsonl
+      - name: Apply revision events
+        run: python scripts/apply_offering_revisions.py --base artifacts/canonical/${{ matrix.year }}/canonical.jsonl --revisions data/offering-revisions-staging.jsonl --output artifacts/canonical/${{ matrix.year }}/final-snapshot.jsonl --audit artifacts/canonical/${{ matrix.year }}/snapshot-audit.json
       - name: Upload canonicalization artifact
         uses: actions/upload-artifact@v4
         with:
