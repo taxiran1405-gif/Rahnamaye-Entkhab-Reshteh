@@ -58,6 +58,15 @@
       ],
       "group": "language",
       "occupation_mapping_status": "pending"
+    },
+    {
+      "id": "PF-CS",
+      "name_fa": "علوم کامپیوتر",
+      "aliases": [
+        "علوم کامپیوتر"
+      ],
+      "group": "math",
+      "occupation_mapping_status": "pending"
     }
   ]
 }
