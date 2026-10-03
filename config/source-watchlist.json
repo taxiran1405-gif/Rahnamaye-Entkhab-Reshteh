@@ -43,6 +43,34 @@
       "name": "U.S. Bureau of Labor Statistics",
       "url": "https://www.bls.gov/ooh/",
       "impact": "MEDIUM"
+    },
+    {
+      "id": "S001-MY",
+      "name": "سامانه جامع آزمون سراسری سنجش",
+      "url": "https://my.sanjesh.org/",
+      "impact": "CRITICAL"
+    },
+    {
+      "id": "SANJESH-NOTICE-ARCHIVE",
+      "name": "آرشیو اطلاعیه‌های سنجش (برای مقایسه و تطبیق)",
+      "url": "https://www.sanjesh.org/",
+      "impact": "CRITICAL"
     }
-  ]
+  ],
+  "monitoring_rules": {
+    "critical_change_requires": "manager_review",
+    "notice_classes": [
+      "policy",
+      "registration",
+      "score_report",
+      "quota_correction",
+      "selection_booklet",
+      "selection_extension",
+      "virtual_advisor",
+      "final_result",
+      "post_result_report",
+      "academic_record"
+    ],
+    "compare_by_admission_year": true
+  }
 }
