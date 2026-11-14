@@ -10,11 +10,13 @@
   },
   "THE": {
     "sha256": "ad171acbb9113e870008b3f326006231f877d71b4b8f3a8f41df1e8404888339",
-    "checked_at": "2026-11-14T18:13:41.137759+00:00",
+    "checked_at": "2026-11-14T22:33:35.041652+00:00",
     "content_type": "text/html; charset=utf-8"
   },
   "WEF": {
-    "checked_at": "2026-10-03T21:24:07.574376+00:00"
+    "sha256": "dc86242042783e896f363b292e83d9d5650d5803511fba59da63595b79bc04f4",
+    "checked_at": "2026-11-14T22:33:35.041652+00:00",
+    "content_type": "text/html;charset=UTF-8"
   },
   "BLS": {
     "checked_at": "2026-10-03T21:24:07.574376+00:00"
